@@ -1,0 +1,42 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+myenv/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated vector database
+vectorstore/
+
+# IDE files
+.vscode/
+.idea/
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+myenv/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated vector database
+vectorstore/
+
+# IDE files
+.vscode/
+.idea/
+
+
