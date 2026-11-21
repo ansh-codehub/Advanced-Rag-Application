@@ -15,15 +15,15 @@ def get_chat_model() -> ChatOpenAI:
         A configured LangChain ChatOpenAI model.
 
     Raises:
-        ValueError: If OPENAI_API_KEY is missing.
+        ValueError: If GROQ_API_KEY is missing.
     """    
 
     config.check_openai_key()
 
     return ChatOpenAI(
-        model = config.OPENAI_CHAT_MODEL,
+        model = config.GROQ_CHAT_MODEL,
         temperature = config.LLM_TEMPERATURE,
-        api_key = config.OPENAI_API_KEY
+        api_key = config.GROQ_API_KEY
     )
 
 @lru_cache(maxsize=1)
@@ -43,6 +43,6 @@ def get_embedding_model() -> OpenAIEmbeddings:
     config.check_openai_key()
 
     return OpenAIEmbeddings(
-        model = config.OPENAI_EMBEDDING_MODEL,
-        api_key = config.OPENAI_API_KEY
+        model = config.HF_EMBEDDING_MODEL,
+        api_key = config.GROQ_API_KEY
     )

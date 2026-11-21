@@ -60,12 +60,12 @@ DOC_STORE_PATH = VECTORSTORE_DIR / "doc_store.json"
 
 
 # OpenAI configuration
-OPENAI_API_KEY = get_setting("OPENAI_API_KEY", "")
-OPENAI_CHAT_MODEL = get_setting(
-    "OPENAI_CHAT_MODEL", "gpt-4o-mini"
+GROQ_API_KEY = get_setting("GROQ_API_KEY", "")
+GROQ_CHAT_MODEL = get_setting(
+    "GROQ_CHAT_MODEL", "gpt-4o-mini"
 )
-OPENAI_EMBEDDING_MODEL = get_setting(
-    "OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"
+HF_EMBEDDING_MODEL = get_setting(
+    "HF_EMBEDDING_MODEL", "text-embedding-3-small"
 )
 
 LLM_TEMPERATURE = 0.0
@@ -140,8 +140,8 @@ def check_pinecone_config() -> None:
 # Application settings summary
 def describe_settings() -> dict:
     return {
-        "Chat Model": OPENAI_CHAT_MODEL,
-        "Embedding Model": OPENAI_EMBEDDING_MODEL,
+        "Chat Model": GROQ_CHAT_MODEL,
+        "Embedding Model": HF_EMBEDDING_MODEL,
         "VectorDB": VECTOR_DB,
         "Parent Chunk Size": PARENT_CHUNK_SIZE,
         "Child Chunk Size": CHILD_CHUNK_SIZE,
